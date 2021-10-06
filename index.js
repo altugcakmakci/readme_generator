@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
+const gmd = require("./utils/generateMarkdown")
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -32,7 +33,7 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'What command should be run to imstall dependencies?',
+        message: 'What command should be run to install dependencies?',
         name: 'nmpcommand',
         default: "npm i"
     },
@@ -45,7 +46,7 @@ const questions = [
     {
         type: 'input',
         message: 'What does the user need to know about using the repo?',
-        name: 'repoinfo'
+        name: 'repousage'
     },
     {
         type: 'input',
@@ -63,7 +64,8 @@ function writeToFile(projectdir,filename, data) {
         fs.mkdirSync(`./output/${projectdir}`);
     }
     console.log(`./output/${projectdir}/${filename}`);
-    fs.appendFile(`./output/${projectdir}/${filename}`, JSON.stringify(data), (err) =>
+    console.log(gmd.generateMarkdown(data));
+    fs.appendFile(`./output/${projectdir}/${filename}`, gmd.generateMarkdown(data), (err) =>
         err ? console.error(err) : console.log('README file created!')
     );
 }
