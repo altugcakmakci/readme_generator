@@ -1,4 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   let retString = ``;
@@ -21,7 +21,7 @@ function renderLicenseBadge(license) {
   return retString;
 }
 
-// TODO: Create a function that returns the license link
+// Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) { 
   let retString = ``;
@@ -44,7 +44,7 @@ function renderLicenseLink(license) {
   return retString;
 }
 
-// TODO: Create a function that returns the license section of README
+// Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) { 
   if (license === null || license.length===0 || license==="None"){
@@ -54,7 +54,7 @@ function renderLicenseSection(license) {
 Please refer to ${renderLicenseLink(license)} for details.`
 }
 
-// TODO: Create a function to generate markdown for README
+// Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.projectname}
 ${renderLicenseBadge(data.license)}
@@ -94,7 +94,7 @@ ${data.repocontribute}
 
 ## Tests
 
-To run tests, run the folloowing command
+To run tests, run the following command
 ${data.testcommand}
 
 ## Questions

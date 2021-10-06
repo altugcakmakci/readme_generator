@@ -1,9 +1,9 @@
-// TODO: Include packages needed for this application
+// Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
 const gmd = require("./utils/generateMarkdown")
 
-// TODO: Create an array of questions for user input
+// Create an array of questions for user input
 const questions = [
     {
         type: 'input',
@@ -55,7 +55,7 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
+// Create a function to write README file
 function writeToFile(projectdir,filename, data) {
     if (!fs.existsSync('./output')) {
         fs.mkdirSync('./output');
@@ -70,7 +70,7 @@ function writeToFile(projectdir,filename, data) {
     );
 }
 
-// TODO: Create a function to initialize app
+// Create a function to initialize app
 function init() {
     inquirer
         .prompt(questions)
