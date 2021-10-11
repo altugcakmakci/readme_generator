@@ -18,6 +18,8 @@ This application generates a README file for the user by asking a list of questi
 
 - [Questions](#questions)
 
+- [Walkthrough](#walkthrough)
+
 ## Installation
 
 To install neessary dependencies, run the following command
@@ -41,3 +43,6 @@ npm test
 
 If you have any questions about the repo, open an issue or contact me directly at alt@yahoo.com. 
 You can find more of my work at (https://github.com/altugcakmakci)
+
+## Walkthrough
+The walkthrough video that demonstrates the functionality of the application can be found at [https://watch.screencastify.com/v/dRpq0uVahqUXTptez9JS]
